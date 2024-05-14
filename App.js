@@ -41,7 +41,7 @@ const App = () => {
     },
   });
 
-  const {errors,handleChange,values,handleSubmit,touched} = formik;
+  const { errors, handleChange, values, handleSubmit, touched } = formik;
 
   return (
     <>
@@ -55,11 +55,10 @@ const App = () => {
             style={styles.TextInput}
             placeholder="Email Address"
             onChangeText={handleChange("email")}
-          
             value={values.email}
             maxLength={25}
           />
-          {touched.email &&errors.email && (
+          {touched.email && errors.email && (
             <Text style={styles.error}>{errors.email}</Text>
           )}
 
@@ -69,7 +68,6 @@ const App = () => {
             placeholder="Jordanian Phone Number"
             keyboardType="phone-pad"
             onChangeText={handleChange("phoneNumber")}
-          
             value={values.phoneNumber}
             maxLength={10}
           />
@@ -83,7 +81,6 @@ const App = () => {
             placeholder="Password"
             secureTextEntry
             onChangeText={handleChange("password")}
-          
             value={values.password}
             maxLength={20}
           />
